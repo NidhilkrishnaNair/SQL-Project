@@ -1,18 +1,32 @@
 # SQL-Project
 Used MySQL to analyse data stored in database 'Awesome Chocolate'
+
 Please find the script below:
+
 show tables;
+
 /* The above query gives me all the tables stored in the database*/
+
 select * from sales;
+
 /* The above query gives me all the data stored in sales table*/
+
 select saledate, amount, customers from sales;
-/* The above query gives me the mentioned columns from sales table*/
+
+/* The above query gives me the mentioned columns from sales table
+
 select saledate, amount, boxes, amount/boxes as 'amount per box' from sales;
+
 /* The above query gives me the mentioned columns along with the calculated column 'amount per box' from sales table*/
+
 select * from sales where amount>10000;
+
 /* The above query gives me all the data stored in sales table where the amount is greater than 10000*/
+
 select * from sales where amount>10000 order by amount;
+
 /* The above query gives me all the data stored in sales table where the amount is greater than 10000 in the ascending order of amount*/
+
 SELECT * FROM sales WHERE amount > 10000 ORDER BY amount DESC;
 /* The above query gives me all the data stored in sales table where the amount is greater than 10000 in the descending order of amount*/
 select * from sales where geoid='g1' order by pid, amount desc;
